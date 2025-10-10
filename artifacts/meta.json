@@ -1,0 +1,17 @@
+{
+  "version": "20251009-184007",
+  "features": [
+    "Capacity",
+    "Bedroom",
+    "unit_sqm",
+    "cap_per_bedroom",
+    "Type",
+    "Kitchen",
+    "Kitchen type",
+    "Gender specific",
+    "Pets",
+    "Location"
+  ],
+  "has_scaler": false,
+  "created_utc": "2025-10-09T18:40:07.939467Z"
+}
