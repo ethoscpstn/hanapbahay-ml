@@ -1,5 +1,5 @@
 {
-  "version": "20251009-184007",
+  "version": "20251014-042035",
   "features": [
     "Capacity",
     "Bedroom",
@@ -13,5 +13,5 @@
     "Location"
   ],
   "has_scaler": false,
-  "created_utc": "2025-10-09T18:40:07.939467Z"
+  "created_utc": "2025-10-14T04:20:35.375962Z"
 }
