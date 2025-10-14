@@ -5,6 +5,7 @@ Replaces Google Colab + ngrok with local deployment
 import os
 import json
 import joblib
+import sklearn
 from typing import Optional, List, Dict, Any
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel, Field
@@ -12,6 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import pandas as pd
 
+print(f"[startup] scikit-learn version: {sklearn.__version__}", flush=True)
 # Configuration
 ART_DIR = os.path.join(os.path.dirname(__file__), 'artifacts')
 MODEL_PATH = os.path.join(ART_DIR, 'model_latest.joblib')
@@ -153,4 +155,5 @@ if __name__ == "__main__":
     # Read PORT from environment (for cloud deployment) or default to 8000 (for local)
     port = int(os.environ.get("PORT", 8000))
     host = "0.0.0.0" if os.environ.get("PORT") else "127.0.0.1"
+
     uvicorn.run(app, host=host, port=port)
